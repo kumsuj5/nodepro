@@ -23,8 +23,14 @@ app.get('/:id', (req,res)=>{
 })
 
 const booksroute = require('./routes/booksroute');
+const user = require('./routes/authroute');
+const prodcut = require('./routes/productroute');
+const categories = require('./routes/Categorieroute');
 
 app.use('/api/v1/book',booksroute);
+app.use('/api/v1/user',user);
+app.use('/api/v1/prodcut',prodcut);
+app.use('/api/v1/categories',categories);
 
 
 
